@@ -25,3 +25,14 @@ nbdist/
 derby.log
 src/main/resources/application.properties
 src/main/resources/application-dev.properties
+
+
+# Elastic Beanstalk Files
+
+.elasticbeanstalk/*
+
+!.elasticbeanstalk/*.cfg.yml
+
+!.elasticbeanstalk/*.global.yml
+
+.elasticbeanstalk/config.yml
