@@ -33,6 +33,7 @@ public class HelloController implements ErrorController{
         return obj;
     }
 
+    // to insert a string
     @RequestMapping("/api/hello/insert")
     public HelloObject insertHelloObject() {
         HelloObject obj = new HelloObject("Hello Sidharth Malhotra!");
@@ -40,6 +41,7 @@ public class HelloController implements ErrorController{
         return obj;
     }
 
+    // to insert an input string
     @RequestMapping("/api/hello/insert/{msg}")
     public HelloObject insertMessage(@PathVariable("msg") String message) {
         HelloObject obj = new HelloObject(message);
@@ -47,16 +49,19 @@ public class HelloController implements ErrorController{
         return obj;
     }
 
+    // to retrieve all records
     @RequestMapping("/api/hello/select/all")
     public List<HelloObject> selectAllHelloObjects() {
         return helloRepository.findAll();
     }
 
+    // fix whitelabel - to catch error
     @RequestMapping(PATH)
     public Integer error(HttpServletRequest request, HttpServletResponse response) {
         return response.getStatus();
     }
 
+    // to catch error
     @Override
     public String getErrorPath() {
         return PATH;

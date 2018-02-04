@@ -11,9 +11,11 @@ public class HelloObject {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     // given message
     private String message;
 
+    // Default Constructor
     public HelloObject() {}
 
     // set message through constructor
@@ -31,10 +33,12 @@ public class HelloObject {
         this.message = message;
     }
 
+    // getter
     public int getId() {
         return id;
     }
 
+    // setter
     public void setId(int id) {
         this.id = id;
     }

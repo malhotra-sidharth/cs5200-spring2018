@@ -8,6 +8,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @SpringBootApplication
 public class Cs5200Spring2018MalhotraApplication extends SpringBootServletInitializer{
 
+	// configuring servlet
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(Cs5200Spring2018MalhotraApplication.class);
