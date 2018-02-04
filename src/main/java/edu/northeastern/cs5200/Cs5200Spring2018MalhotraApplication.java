@@ -6,12 +6,12 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class Cs5200Spring2018MalhotraApplication{
+public class Cs5200Spring2018MalhotraApplication extends SpringBootServletInitializer{
 
-//	@Override
-//	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-//		return application.sources(Cs5200Spring2018MalhotraApplication.class);
-//	}
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(Cs5200Spring2018MalhotraApplication.class);
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(Cs5200Spring2018MalhotraApplication.class, args);
